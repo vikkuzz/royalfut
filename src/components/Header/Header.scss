@@ -1,0 +1,36 @@
+.header{
+    display: flex;
+    position: fixed;
+    padding: 20px;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    align-items: center;
+    padding: 5.8666666667vmin 6.4vmin;
+    font-size: 4.8vmin;
+    line-height: 4.8vmin;
+    text-transform: uppercase;
+    pointer-events: none;
+
+    &__wrapper-menu{
+        display:flex;
+    }
+
+    &__countries, &__currency{
+        border:none;
+        background: transparent;
+        color: inherit;
+    }
+
+    &__home-page{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__menu{
+        background: transparent;
+        border: none;
+        color: inherit;
+    }
+}
