@@ -1,20 +1,23 @@
 import React from "react";
 
+import Select from "../Select";
+
+import {flagLangs, currency} from "../../data-elements";
+
+
 import './Header.scss';
 
 const Header = () => {
     return <header className="header">
         <div className="header__wrapper-menu">
             <div className="header__home-page">
-                <span>Royalfut</span><span>монеты FIFA22</span></div>
-            <select className="header__countries">
-                <option>Пункт 1</option>
-                <option>Пункт 2</option>
-            </select>
-            <select className="header__currency">
-                <option>Пункт 1</option>
-                <option>Пункт 2</option>
-            </select>
+                <span className="header__logo">Royalfut</span>
+                <span className="header__sublogo">FIFA22 coins</span>
+            </div>
+            <div className="header__wrapper-center">
+                <Select elems={flagLangs}/>
+                <Select elems={currency}/>
+            </div>            
             <button className="header__menu">menu</button>
         </div>
     </header>

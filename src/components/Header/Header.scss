@@ -1,20 +1,61 @@
 .header{
     display: flex;
     position: fixed;
-    padding: 20px;
     left: 0;
     right: 0;
     top: 0;
     z-index: 2;
     align-items: center;
-    padding: 5.8666666667vmin 6.4vmin;
-    font-size: 4.8vmin;
-    line-height: 4.8vmin;
+    padding: 24px;
+    font-family: 'BebasNeue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 48px;
     text-transform: uppercase;
-    pointer-events: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 12, 31, 0.8)), color-stop(6.7%, rgba(8, 12, 31, 0.79)), color-stop(13.3%, rgba(8, 12, 31, 0.77)), color-stop(20%, rgba(8, 12, 31, 0.73)), color-stop(26.7%, rgba(8, 12, 31, 0.68)), color-stop(33.3%, rgba(8, 12, 31, 0.62)), color-stop(40%, rgba(8, 12, 31, 0.54)), color-stop(46.7%, rgba(8, 12, 31, 0.45)), color-stop(53.3%, rgba(8, 12, 31, 0.35)), color-stop(60%, rgba(8, 12, 31, 0.27)), color-stop(66.7%, rgba(8, 12, 31, 0.19)), color-stop(73.3%, rgba(8, 12, 31, 0.12)), color-stop(80%, rgba(8, 12, 31, 0.07)), color-stop(86.7%, rgba(8, 12, 31, 0.03)), color-stop(93.3%, rgba(8, 12, 31, 0.007)), to(rgba(8, 12, 31, 0)));
+  
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 26.6666666667vmin;
+        background: -webkit-gradient(linear,left top,left bottom,from(rgba(8,12,31,.8)),color-stop(6.7%,rgba(8,12,31,.79)),color-stop(13.3%,rgba(8,12,31,.77)),color-stop(20%,rgba(8,12,31,.73)),color-stop(26.7%,rgba(8,12,31,.68)),color-stop(33.3%,rgba(8,12,31,.62)),color-stop(40%,rgba(8,12,31,.54)),color-stop(46.7%,rgba(8,12,31,.45)),color-stop(53.3%,rgba(8,12,31,.35)),color-stop(60%,rgba(8,12,31,.27)),color-stop(66.7%,rgba(8,12,31,.19)),color-stop(73.3%,rgba(8,12,31,.12)),color-stop(80%,rgba(8,12,31,.07)),color-stop(86.7%,rgba(8,12,31,.03)),color-stop(93.3%,rgba(8,12,31,.007)),to(rgba(8,12,31,0)));
+    }
+
+    &__home-page{
+        position: relative;
+    }
+
+    &__logo{
+        font-family: 'BebasNeue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 24px
+    }
+
+    &__sublogo{
+        position: absolute;
+        left: 0;
+        top: 24px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        
+        white-space: nowrap;
+        text-transform: none;
+    }
 
     &__wrapper-menu{
         display:flex;
+        width:100%;
+        background: transparent;
     }
 
     &__countries, &__currency{
@@ -32,5 +73,19 @@
         background: transparent;
         border: none;
         color: inherit;
+    }
+
+    .header__wrapper-center{
+        display: flex;
+        margin:0 auto;
+        align-items: center;
+        background: transparent;
+    }
+}
+
+.select-countries{
+    .select-countries__option{
+        background: url('../../img/usa.svg') no-repeat center;
+        background-size: contain;
     }
 }

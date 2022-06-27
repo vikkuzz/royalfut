@@ -7,8 +7,8 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <div className="App__title">самые безопасные монеты FIFA тут!</div>
-      <Calculator/>
+      <h1 className="App__title">Safest option to buy FIFA 22 coins</h1>
+      {/* <Calculator/> */}
     </div>
   );
 }

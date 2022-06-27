@@ -1,13 +1,14 @@
 .App {
   display:flex;
   flex-direction: column;
+  padding: 24px;
   
   &__title{
-    margin: 20.333333333vmin 5.3333333333vmin 15vmin;
-    font-size: 10.8vmin;
-    line-height: 10.8vmin;
-    font-size: 10.8vmin;
-    line-height: 10.8vmin;
+    margin-top: 64px; 
+    font-family: 'BebasNeue';
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 48px;
   }
 }
 
