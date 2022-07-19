@@ -31,15 +31,25 @@ body, * {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
 body{
+  position:relative;
   background-color: transparent;
+  min-width: 375px;
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
 }
 #root{
   background-color: transparent;
+  min-height: 100vh;
 }
-style, title{
+style, title, head{
   display: none;
+
 }
 .body__backgr{
   position: absolute;
@@ -48,21 +58,21 @@ style, title{
   background-repeat: no-repeat;
   width: 100%;
   height: 196vmin;
-  opacity: 0.8;
-  z-index: -1;
+  opacity: 0.2;
   -webkit-clip-path: polygon(0 0,100% 0,100% 16.5%,0 100%);
   clip-path: polygon(0 0,100% 0,100% 16.5%,0 100%);
   mix-blend-mode: lighten;
-  max-width: 700px;
+  top: 0;
+  left: 0;
 }
-.body__backgr::before{
+body::before{
   content: "";
     position: absolute;
     left: 0;
     top: 0;
     z-index: 1;
-    width: 50vmin;
-    height: 73vmin;
+    width: 65vmin;
+    height: 95vmin;
     background-image: url('./img/treangle.svg');
     -moz-background-size: contain;
     background-size: contain;
