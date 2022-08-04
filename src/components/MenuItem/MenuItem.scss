@@ -1,0 +1,14 @@
+.menu-item__text{
+    display: flex;
+    justify-content: flex-end;
+}
+.burger-orange-menu-item{
+    .burger-orange-menu-item__text-wrapper{
+        color: #ff5c00;
+    }
+}
+.burger-yellow-menu-item{
+    .burger-yellow-menu-item__text-wrapper{
+        color: #e5b713;
+    }
+}
