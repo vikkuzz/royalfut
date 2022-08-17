@@ -41,6 +41,10 @@
         font-size: 36px;
         line-height: 36px;
     }    
+
+    &:hover{
+        opacity: 0.7;
+    }
 }
 .header__sublogo{
     font-family: 'Montserrat',helvetica,arial,sans-serif;
@@ -64,6 +68,10 @@
     border: none;
     min-width: 30px;
     min-height: 30px;
+
+    &:hover{
+        opacity: 0.7;
+    }
 }
 .header__divider{
     width:30px;

@@ -44,7 +44,7 @@ function Header(props) {
             className="header__burger-bottom header__divider"
           ></div>
         </button>
-        <button className="header__login from-1025-to-1900">Sign in</button>
+        <button className="header__login from-1025-to-1900">Log in</button>
       </div>
     </div>
   );
