@@ -1,8 +1,4 @@
-.menu-item__text{
-    display: flex;
-    justify-content: flex-end;
-    padding: 0 14px;
-}
+
 .burger-orange-menu-item{
     .burger-orange-menu-item__text-wrapper{
         color: #ff5c00;
@@ -22,4 +18,9 @@
 }
 .menu-item__text-wrapper{
     padding: 0 14px
+}
+.menu-item__text{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 60px;
 }

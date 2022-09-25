@@ -4,10 +4,11 @@ import { loginModal } from "../../redux/actions/royalfutActions";
 
 import "./Header.scss";
 
-function Header(props) {
-  const topDivider = React.createRef();
-  const centerDivider = React.createRef();
-  const bottomDivider = React.createRef();
+function Header() {
+  const modal = useSelector((state) => state.royalfutReducer.loginModal);
+  // const topDivider = React.createRef();
+  // const centerDivider = React.createRef();
+  // const bottomDivider = React.createRef();
   const dispatch = useDispatch();
 
   const loginModalState = useSelector(
@@ -15,9 +16,6 @@ function Header(props) {
   );
 
   const burgerToX = () => {
-    centerDivider.current.classList.toggle("header__center-divider-x");
-    topDivider.current.classList.toggle("header__top-divider-x");
-    bottomDivider.current.classList.toggle("header__bottom-divider-x");
     dispatch(loginModal(!loginModalState));
   };
   return (
@@ -32,19 +30,36 @@ function Header(props) {
       <div className="header__right">
         <button onClick={burgerToX} className="header__burger from-375-to-1024">
           <div
-            ref={topDivider}
-            className="header__burger-top header__divider"
+            //ref={topDivider}
+            className={`header__burger-top header__divider ${
+              modal && "header__top-divider-x"
+            }`}
           ></div>
           <div
-            ref={centerDivider}
-            className="header__burger-center header__divider"
+            //ref={centerDivider}
+            className={`header__burger-center header__divider ${
+              modal && "header__center-divider-x"
+            }`}
           ></div>
           <div
-            ref={bottomDivider}
-            className="header__burger-bottom header__divider"
+            //ref={bottomDivider}
+            className={`header__burger-bottom header__divider ${
+              modal && "header__bottom-divider-x"
+            }`}
           ></div>
         </button>
-        <button className="header__login from-1025-to-1900">Log in</button>
+
+        <button onClick={burgerToX} className="header__login from-1025-to-1900">
+          {loginModalState ? (
+            <div>
+              <div className="header__burger-top header__divider header__top-divider-x"></div>
+              <div className="header__burger-center header__divider header__center-divider-x"></div>
+              <div className="header__burger-bottom header__divider header__bottom-divider-x"></div>
+            </div>
+          ) : (
+            "Log in"
+          )}
+        </button>
       </div>
     </div>
   );
