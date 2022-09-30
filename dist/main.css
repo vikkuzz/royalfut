@@ -1,0 +1,211 @@
+/*!****************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/App/App.scss ***!
+  \****************************************************************************************************************************************************************/
+.App {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  z-index: 1;
+}
+.App__title {
+  margin-top: 64px;
+  font-family: "BebasNeue";
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.app__burger-wrapper {
+  width: fit-content;
+}
+/*!**********************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/Header/Header.scss ***!
+  \**********************************************************************************************************************************************************************/
+.header {
+  position: fixed;
+  top: 0;
+  padding: 22px 24px;
+  height: auto;
+  background: transparent;
+  z-index: 10;
+  align-items: flex-start;
+}
+@media (min-width: 1024) {
+  .header {
+    padding: 28px 48px;
+  }
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 96px;
+  background: linear-gradient(180deg, rgba(8, 12, 31, 0.8), rgba(8, 12, 31, 0.79) 6.7%, rgba(8, 12, 31, 0.77) 13.3%, rgba(8, 12, 31, 0.73) 20%, rgba(8, 12, 31, 0.68) 26.7%, rgba(8, 12, 31, 0.62) 33.3%, rgba(8, 12, 31, 0.54) 40%, rgba(8, 12, 31, 0.45) 46.7%, rgba(8, 12, 31, 0.35) 53.3%, rgba(8, 12, 31, 0.27) 60%, rgba(8, 12, 31, 0.19) 66.7%, rgba(8, 12, 31, 0.12) 73.3%, rgba(8, 12, 31, 0.07) 80%, rgba(8, 12, 31, 0.03) 86.7%, rgba(8, 12, 31, 0.007) 93.3%, rgba(8, 12, 31, 0));
+  pointer-events: none;
+}
+
+.header__left {
+  background: transparent;
+  justify-content: flex-start;
+}
+
+.header__right {
+  justify-content: flex-end;
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "BebasNeue";
+  font-style: normal;
+  font-size: 24px;
+  line-height: 24px;
+  width: auto;
+}
+@media (min-width: 1024px) {
+  .header__logo {
+    font-family: "BebasNeue";
+    font-style: normal;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+.header__logo:hover {
+  opacity: 0.7;
+}
+
+.header__sublogo {
+  font-family: "Montserrat", helvetica, arial, sans-serif;
+  white-space: nowrap;
+  text-transform: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  opacity: 0.6;
+  justify-content: flex-start;
+}
+
+.header__burger {
+  position: relative;
+  flex-direction: column;
+  width: auto;
+  padding: 0;
+  border: none;
+  min-width: 30px;
+  min-height: 30px;
+}
+.header__burger:hover {
+  opacity: 0.7;
+}
+
+.header__divider {
+  width: 30px;
+  height: 2px;
+  background: white;
+}
+
+.header__burger-center {
+  margin: 4px 0;
+}
+
+.header__login {
+  font-family: "BebasNeue";
+  font-style: normal;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 8px 16px;
+  width: auto;
+  border: 1px solid #eab11f;
+  border-radius: 2px;
+  background-color: #12142b;
+}
+
+.header__login:hover {
+  background: #eab11f;
+}
+
+.header__top-divider-x {
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.header__bottom-divider-x {
+  position: absolute;
+  transform: rotate(-45deg);
+}
+
+.header__center-divider-x {
+  transform: rotate(360deg);
+  width: 0;
+}
+/*!**************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/MenuItem/MenuItem.scss ***!
+  \**************************************************************************************************************************************************************************/
+.burger-orange-menu-item .burger-orange-menu-item__text-wrapper {
+  color: #ff5c00;
+}
+
+.burger-yellow-menu-item .burger-yellow-menu-item__text-wrapper {
+  color: #e5b713;
+}
+
+.menu-item {
+  cursor: pointer;
+  user-select: none;
+}
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-item__text-wrapper {
+  padding: 0 14px;
+}
+
+.menu-item__text {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 60px;
+}
+/*!******************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/BurgerMenu/BurgerMenu.scss ***!
+  \******************************************************************************************************************************************************************************/
+.burger-menu {
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  background-color: #12142b;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  max-width: 640px;
+  right: 0;
+}
+
+.burger-menu__wrapper {
+  display: flex;
+  flex-direction: column;
+  font-size: 50px;
+  padding: 65px 0px 50px;
+}
+
+.burger-menu__footer {
+  border-top: 1px solid rgba(196, 196, 196, 0.2);
+  height: 100px;
+}
+
+.burger-menu__icon {
+  width: 35px;
+  fill: white;
+  cursor: pointer;
+}
+.burger-menu__icon:hover {
+  fill: gold;
+}
